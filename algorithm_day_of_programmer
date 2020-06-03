@@ -1,0 +1,19 @@
+n = int(input())
+arr = [31,28,31,30,31,30,31,31]
+
+
+if n > 1917:
+    if (year == 1918):
+        print('26.09.1918')
+        exit()
+
+    elif (n%400==0 or (n%4 ==0 and n%100!=0)):
+        arr[1] = 29
+    else:
+        print("{}.09.{}".format(int(256-sum(arr)),n))
+else:
+    if (n%4==0):
+        arr[1] = 29
+        print("{}.09.{}".format((256-(sum(arr))),n))
+    else:
+        print("{}.09.{}".format(int(256-sum(arr)),n))

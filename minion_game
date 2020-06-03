@@ -1,0 +1,36 @@
+def minion_game(string):
+    #------Substrings----------------------
+
+    x = string
+    vowels = ['A','E','I','O','U']
+    kevin = 0
+    stuart = 0
+    a = []
+
+    for i in range(len(x)):
+        for j in range(len(x),i,-1):
+            a.append(x[i:j])
+
+
+
+    for i in range(len(x)):
+    #    print(str(i) + " element of array : ",a[i])
+    #    print("letter of first element : ", (a[i])[0])
+        if(x[i] in vowels):
+    #        print((a[i])[0] + " is a vowel")
+            kevin = kevin + len(x)-i
+        else:
+            stuart = stuart + len(x)-i
+    #    print("kevin : " + str(kevin) +" \nStuart : "+str(stuart))
+    #    print("--------------------------------------------------------")
+
+    if ( stuart > kevin):
+        print("Stuart",stuart)
+    elif (stuart == kevin):
+        print ("Draw")
+    else:
+        print("Kevin",kevin)
+    # your code goes here
+if __name__ == '__main__':
+    s = input()
+    minion_game(s)

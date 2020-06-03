@@ -1,0 +1,61 @@
+import pickletools
+import math
+string = ""
+s= "kandarp parikh"
+tmp = s.split(' ')
+x = tmp[0]
+k = list(x)
+k[0] = k[0].upper()
+string = string.join(k)
+print(string)
+
+
+import string
+print(string.capwords(input(), ' '))
+
+
+    for k in range(len(vowels)):
+        if(tmp == vowels[k]):
+            kevin = kevin + a.count(a[i])
+        else:
+            stuart = stuart + a.count(a[i])
+
+s = input()
+
+vowels = 'AEIOU'
+
+kevsc = 0
+stusc = 0
+for i in range(len(s)):
+    if s[i] in vowels:
+        kevsc += (len(s)-i)
+    else:
+        stusc += (len(s)-i)
+
+if kevsc > stusc:
+    print ("Kevin", kevsc)
+elif kevsc < stusc:
+    print ("Stuart", stusc)
+else:
+    print ("Draw")
+
+
+
+n = int(input().strip())
+arr = []
+for _ in range(n):
+    arr.append(list(map(int, input().rstrip().split())))
+print (arr)
+
+pdiag = 0
+sdiag = 0
+for i in range(len(arr)):
+    pdiag = pdiag + arr[i][i]
+    sdiag = sdiag + arr[i][len(arr)-1-i]
+x = pdiag - sdiag
+
+print(x)
+return x
+
+x = -15
+print(x.__abs__())

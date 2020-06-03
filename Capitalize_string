@@ -1,0 +1,35 @@
+#!/bin/python
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the solve function below.
+def solve(s):
+    fname =""
+    lname = ""
+    tmp = s.split(' ')
+    x = tmp[0]
+    y= tmp[1]
+    k = list(x)
+    p = list(y)
+    k[0] = k[0].upper()
+    p[0] = p[0].upper()
+    lname = lname.join(p)
+    fname = fname.join(k)
+    name = fname+" "+lname
+    return (name)
+
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = raw_input()
+
+    result = solve(s)
+
+    fptr.write(result + '\n')
+
+    fptr.close()
