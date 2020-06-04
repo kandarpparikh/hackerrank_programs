@@ -3,3 +3,5 @@ yellow
 green
 purple
 red
+
+green is a cold color
